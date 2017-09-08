@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.5.0'
+    }
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+}
+
+dependencies {
+    provided rootProject.ext.dependencies['androidthings']
+    compile 'com.android.support:support-annotations:26.0.2'
+}
+
+publish {
+    userOrg = 'nilhcem'
+    groupId = 'com.nilhcem.androidthings'
+    artifactId = 'driver-wsepd'
+    publishVersion = '0.0.1'
+    desc = 'Android Things driver for Waveshare e-paper display modules.'
+    website = 'https://github.com/Nilhcem/wsepd-androidthings'
+}
