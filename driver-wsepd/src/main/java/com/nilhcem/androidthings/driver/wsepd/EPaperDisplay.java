@@ -1,7 +1,7 @@
 package com.nilhcem.androidthings.driver.wsepd;
 
 import com.google.android.things.pio.Gpio;
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 import com.google.android.things.pio.SpiDevice;
 
 import java.io.IOException;
@@ -21,11 +21,11 @@ public interface EPaperDisplay extends AutoCloseable {
 
         public static EPaperDisplay create(String spiName, String busyGpioName, String rstGpioName, String dcGpioName,
                                            DeviceType deviceType) throws IOException {
-            PeripheralManagerService service = new PeripheralManagerService();
-            SpiDevice spiDevice = service.openSpiDevice(spiName);
-            Gpio busyGpio = service.openGpio(busyGpioName);
-            Gpio rstGpio = service.openGpio(rstGpioName);
-            Gpio dcGpio = service.openGpio(dcGpioName);
+            PeripheralManager manager = PeripheralManager.getInstance();
+            SpiDevice spiDevice = manager.openSpiDevice(spiName);
+            Gpio busyGpio = manager.openGpio(busyGpioName);
+            Gpio rstGpio = manager.openGpio(rstGpioName);
+            Gpio dcGpio = manager.openGpio(dcGpioName);
 
             return new EPaperDisplayWaveshare(spiDevice, busyGpio, rstGpio, dcGpio, deviceType);
         }

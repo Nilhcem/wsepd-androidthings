@@ -14,6 +14,6 @@ android {
 }
 
 dependencies {
-    provided rootProject.ext.dependencies['androidthings']
-    compile project(':driver-wsepd')
+    compileOnly rootProject.ext.dependencies['androidthings']
+    implementation project(':driver-wsepd')
 }

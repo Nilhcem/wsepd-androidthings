@@ -9,7 +9,7 @@ public class BitmapHelper {
     /**
      * Converts a bitmap image to LCD screen data and returns the screen data as bytes.
      *
-     * @param bmp       The bitmap image that you want to convert to screen data.
+     * @param bmp The bitmap image that you want to convert to screen data.
      * @return A byte array with pixel data.
      */
     public static byte[] bmpToBytes(Bitmap bmp) {

@@ -1,7 +1,5 @@
 package com.nilhcem.androidthings.driver.wsepd;
 
-import android.support.annotation.Nullable;
-
 import com.google.android.things.pio.Gpio;
 import com.google.android.things.pio.SpiDevice;
 
@@ -147,11 +145,11 @@ public class EPaperDisplayWaveshare implements EPaperDisplay {
         sendCommand(command, null);
     }
 
-    private void sendCommand(byte command, @Nullable byte[] data) throws IOException {
+    private void sendCommand(byte command, /*Nullable*/ byte[] data) throws IOException {
         sendCommand(command, data, true);
     }
 
-    private void sendCommand(byte command, @Nullable byte[] data, boolean singleWrite) throws IOException {
+    private void sendCommand(byte command, /*Nullable*/ byte[] data, boolean singleWrite) throws IOException {
         // Send command
         dcGpio.setValue(DC_COMMAND);
         spiDevice.write(new byte[]{command}, 1);
