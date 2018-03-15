@@ -28,7 +28,7 @@ publish {
     userOrg = 'nilhcem'
     groupId = 'com.nilhcem.androidthings'
     artifactId = 'driver-wsepd'
-    publishVersion = '0.0.1'
+    publishVersion = '0.0.2'
     desc = 'Android Things driver for Waveshare e-paper display modules.'
     website = 'https://github.com/Nilhcem/wsepd-androidthings'
 }
