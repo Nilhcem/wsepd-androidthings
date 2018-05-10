@@ -55,7 +55,7 @@ public class EPaperDisplayWaveshare implements EPaperDisplay {
         spiDevice.setMode(SpiDevice.MODE0);
         spiDevice.setFrequency(2_000_000); // max speed: 2MHz
         spiDevice.setBitsPerWord(8);
-        spiDevice.setBitJustification(false); // MSB first
+        spiDevice.setBitJustification(SpiDevice.BIT_JUSTIFICATION_MSB_FIRST); // MSB first
         spiDevice.setCsChange(false);
 
         busyGpio.setDirection(Gpio.DIRECTION_IN);
