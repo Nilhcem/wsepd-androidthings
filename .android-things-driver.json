@@ -1,0 +1,19 @@
+{
+  "title": "Waveshare 2.9inch e-Paper Module",
+  "category": "E-Paper Display",
+  "samples": [
+    "https://github.com/Nilhcem/wsepd-androidthings/tree/master/sample"
+  ],
+  "published-maven": {
+    "maven-url": "https://jcenter.bintray.com",
+    "groupid": "com.nilhcem.androidthings",
+    "artifactid": "driver-wsepd"
+  },
+  "compatible-with": [
+    {
+      "title": "Waveshare 2.9inch E-Ink display module",
+      "photo": "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/2/_/2.9inch-e-paper-module-4.jpg",
+      "url": "https://www.waveshare.com/2.9inch-e-paper-module.htm"
+    }
+  ]
+}
